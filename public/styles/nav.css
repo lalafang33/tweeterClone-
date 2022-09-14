@@ -1,0 +1,34 @@
+html {
+  box-sizing: border-box; 
+}
+*:before, *:after {
+  box-sizing: inherit; 
+}
+
+nav {
+  color: #FFFFFF;
+  background-color: #4056A1;
+  font-size: 24px;
+  padding: 1.5em;
+  height: 120px;
+  border: 1.5px;
+  display: flex;
+  justify-content: space-between;
+  /* position: fixed; */
+  /* font-family: 'Bungee'; */
+
+  font-family: 'Bungee'
+  /* font-family: 'Source Sans Pro', sans-serif; */
+
+}
+nav > div {
+  font-family: 'Source Sans Pro', sans-serif;
+  text-align: center;
+  /* position: fixed; */
+}
+
+
+
+
+
+
