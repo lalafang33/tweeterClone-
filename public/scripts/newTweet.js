@@ -1,0 +1,4 @@
+$(() => {
+const $tweetContainer = $(".tweet-container"); 
+
+})

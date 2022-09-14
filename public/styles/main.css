@@ -11,36 +11,49 @@
   font-family: "Source Sans Pro", cursive;
   font-weight: 300;
 }
-/* .tweetform {
-} */
 
-#tweet-text {
+#tweet-container {
+  padding: 1em;
   border-bottom: solid black;
-  background-color: #f4f1ec;
-  border-left: none;
-  border-top: none;
-  border-right: none;
+  border-top: solid black;
+  border-right: solid black;
+  border-left: solid black;
   width: 100%;
-
+  display: flex;
+  align-items: center;
+  margin: 30px
+  
 }
 
-.text-count{
+.tweet > h5 {
+  border-bottom: solid black;
+  padding: 1em;
+  border-width: 100%;
+ 
+}
+
+.tweet-words {
   display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.bottom-tag {
+  display: flex; 
   justify-content: space-between;
 }
 
-.button {
-  background-color: #4056A1;
-  color: #f4f1ec;
-  font-family: 'Bungee'
+.tweetheader {
+  display:flex; 
+  justify-content: space-between;
+
 }
 
-.counter {
-  font-family: 'Bungee';
-}
-/* main > h2 {
-  padding: 1.5em;
+.iconparent{
   display: flex;
-  justify-content: space-evenly;
-} */
+  flex-direction: row;
+}
 
+.handle {
+  color: grey;
+}

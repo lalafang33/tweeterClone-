@@ -27,6 +27,11 @@ nav > div {
   /* position: fixed; */
 }
 
+nav > div > p {
+  margin: 0px;
+}
+
+
 
 
 

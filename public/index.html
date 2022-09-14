@@ -21,6 +21,10 @@
     <link rel="stylesheet" href="/styles/header.css"
     type="text/css" />
 
+    <!-- new tweet form CSS -->
+    <link rel="stylesheet" href="/styles/new-tweet.css"
+    type="text/css" />
+
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
@@ -38,6 +42,9 @@
     <!-- transaparent colour -->
     <link href="http://www.transparenttextures.com/patterns/45-degree-fabric-light.png" >
 
+    <!-- composer JS -->
+      <script src="/scripts/composer-char-counter.js"></script>
+
   </head>
 
 
@@ -45,15 +52,15 @@
     <!-- Top nav bar (fixed) -->
     <nav>
       <span>tweeter</span>
-      <div> <strong>Write</strong> a new tweet 
-        <br> 
-        <i class="fa-solid fa-angles-down"></i></div>
-     </nav>
+      <div> 
+        <p><strong>Write</strong> a new tweet </p>
+        <i class="fa-solid fa-angles-down"></i>
+      </div>
+    </nav>
   <header class="header">
       <div>
           <img src="/images/profile-hex.png"> 
       </div>
-      <br>
       <div>
           <h2>Lala Fang</h2>
       </div>
@@ -62,18 +69,37 @@
 
 
     <!-- Page-specific (main) content here -->
-    <main class="container">
+    <!-- check if below class and id is used -->
+    <main class="container" id="main-container">
       <section class="new-tweet">
         <h2 class="tweet-title">Compose Tweet</h2>
         <form class="tweetForm" method="POST" action="/tweets/">
-          <!-- <label for="tweet-text">What are you humming about?</label> -->
           <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
           <div class="text-count">
             <button type="submit" class="button">Tweet</button>
             <output name="counter" class="counter" for="tweet-text">140</output>
           </div>
         </form>
-      </section>
+        </section>
+        <section id="tweet-container">
+          <article class="tweet">
+            <header class="tweetheader">
+              <div class="iconparent"><img src="https://i.imgur.com/73hZDYK.png"> <p>username</p> 
+              </div> 
+              <p class="handle">@handle</p>
+            </header>
+            <h5 class="tweet-words"> If I have seen further it is by standing on the shoulders of giants</h5>
+          <h6 class="bottom-tag"> 
+            <output name="days" class="days" for="tweet">10 days ago</output>
+            <output name="emoticons" class="emoticons" for="tweet"> <i class="fa-solid fa-flag"></i>
+              <i class="fa-solid fa-retweet"></i>
+              <i class="fa-solid fa-heart"></i>
+            </output>
+          </h6>
+        </article>
+        </section>
+        <script src="/scripts/newTweet.js" ></script>
+        <footer class="footer">  </footer>
     </main>
   </body>
 </html>
