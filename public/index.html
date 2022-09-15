@@ -21,6 +21,10 @@
     <link rel="stylesheet" href="/styles/header.css"
     type="text/css" />
 
+      <!-- Tweet CSS -->
+      <link rel="stylesheet" href="/styles/tweet.css"
+      type="text/css" />
+
     <!-- new tweet form CSS -->
     <link rel="stylesheet" href="/styles/new-tweet.css"
     type="text/css" />
@@ -45,7 +49,9 @@
     <!-- composer JS -->
       <script src="/scripts/composer-char-counter.js"></script>
 
-  </head>
+      <!-- timeago -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    </head>
 
 
   <body>
@@ -72,8 +78,13 @@
     <!-- check if below class and id is used -->
     <main class="container" id="main-container">
       <section class="new-tweet">
+        <div class="error-container">
+          <div class="error-message">
+          </div>
+        </div>
         <h2 class="tweet-title">Compose Tweet</h2>
-        <form class="tweetForm" method="POST" action="/tweets/">
+        <form class="tweetForm">
+          <!-- method="POST" action="/tweets/" -->
           <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
           <div class="text-count">
             <button type="submit" class="button">Tweet</button>
@@ -82,21 +93,6 @@
         </form>
         </section>
         <section id="tweet-container">
-          <article class="tweet">
-            <header class="tweetheader">
-              <div class="iconparent"><img src="https://i.imgur.com/73hZDYK.png"> <p>username</p> 
-              </div> 
-              <p class="handle">@handle</p>
-            </header>
-            <h5 class="tweet-words"> If I have seen further it is by standing on the shoulders of giants</h5>
-          <h6 class="bottom-tag"> 
-            <output name="days" class="days" for="tweet">10 days ago</output>
-            <output name="emoticons" class="emoticons" for="tweet"> <i class="fa-solid fa-flag"></i>
-              <i class="fa-solid fa-retweet"></i>
-              <i class="fa-solid fa-heart"></i>
-            </output>
-          </h6>
-        </article>
         </section>
         <script src="/scripts/newTweet.js" ></script>
         <footer class="footer">  </footer>

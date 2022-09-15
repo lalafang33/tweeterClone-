@@ -1,0 +1,34 @@
+#tweet-text {
+  border-bottom: solid black;
+  background-color: #f4f1ec;
+  border-left: none;
+  border-top: none;
+  border-right: none;
+  width: 100%;
+
+}
+
+.text-count{
+  display: flex;
+  justify-content: space-between;
+}
+
+.button {
+  background-color: #4056A1;
+  color: #f4f1ec;
+  font-family: 'Bungee'
+}
+
+.counter {
+  font-family: 'Bungee';
+
+}
+
+.footer {
+  height: 50px;
+}
+
+.counter.error {
+ color: red; 
+}
+

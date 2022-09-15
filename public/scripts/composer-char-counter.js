@@ -8,6 +8,7 @@ $(document).ready(function() {
     counter.val(textlen);
     if (textlen <= 0) {
       counter.addClass('error');
+      alert("error, too long!")
     }
   });
 });

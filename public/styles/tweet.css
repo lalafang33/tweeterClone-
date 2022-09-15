@@ -1,0 +1,19 @@
+.tweet {
+  width: 90%; 
+  border: solid black 3px;
+  margin: 5px;
+  padding: 10px;
+}
+
+.bottom-tag {
+  display: flex; 
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tweet-words {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-bottom: solid black;
+}

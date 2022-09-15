@@ -1,11 +1,5 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
 
-const $tweet = $(`.tweet`);
-
+$(document).ready(function() {
 
 const data = [
   {
@@ -34,31 +28,82 @@ const data = [
 
 const renderTweets = function(tweets) {
   for (const tweet of tweets){
-    const $tweet = renderTweet(tweet);
-    $container.prepend($tweet);
+    const generatedTweet = createTweetElement(tweet);
+    $("#tweet-container").prepend(generatedTweet);
   }
-}
+};
+
+const $container = $('.tweet-container');
+
+const loadTweet = () => {
+  $.get("/tweets", function (data) {
+    $container.empty();
+    renderTweets(data);
+    console.log(data);
+  });
+ };
+
 
 const createTweetElement = function(tweet) {
+  const user = tweet.user;
+  const content = tweet.content; 
+  const createdAt = tweet.created_at
  const article = $(`
  <article class="tweet">
         <header class="tweetheader">
-          <div class="iconparent"><img src="https://i.imgur.com/73hZDYK.png">
-            <p>username</p>
+          <div class="iconparent"><img src= ${user.avatars}>
+            <p>${user.name}</p>
           </div>
-          <p class="handle">@handle</p>
+          <p class="handle">${user.handle}</p>
         </header>
-        <h5 class="tweet-words"> If I have seen further it is by standing on the shoulders of giants</h5>
-        <h6 class="bottom-tag">
-          <output name="days" class="days" for="tweet">10 days ago</output>
-          <output name="emoticons" class="emoticons" for="tweet"> <i class="fa-solid fa-flag"></i>
+        <div class="tweet-words"> 
+          <p>${content.text}</p>
+        </div>
+        <div class="bottom-tag">
+        <h6 class="time-stamp">${timeago.format(createdAt)} </h6>
+          <div class="emoticons">
+            <i class="fa-solid fa-flag"></i>
             <i class="fa-solid fa-retweet"></i>
             <i class="fa-solid fa-heart"></i>
-          </output>
-        </h6>
+          </div>
+        </div>
       </article>
  `);
  return article; 
 };
 
-renderTweets(data);
+
+
+
+// writing tweet grabbing the form
+const $form = $('.tweetform');
+
+$form.on('submit', (event) => {
+  event.preventDefault();
+
+  const serializedData = $form.serialize();
+  console.log(serializedData);
+
+  $.post('/tweets', serializedData, (response) => {
+    console.log(response);
+  })
+  loadTweet(); 
+});
+
+
+$("form").submit(function(error) {
+  error.preventDefault();
+  let text = $('#tweet-text').val();
+  if(text === null || text === "") {
+    alert("Please do not submit empty tweet"); 
+  } else {
+    $.post("/tweets", $(this).serialize())
+      .done(() => {
+        loadTweet()
+      })
+  }
+});
+
+
+});
+
