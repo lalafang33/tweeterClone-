@@ -18,16 +18,13 @@ body {
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
-  /* font-family: 'Bungee'; */
   font-family: 'Source Sans Pro', sans-serif;
-  position: relative;
 }
 
 main {
   padding: 1em; 
   width: 90%;
   background-color: #f4f1ec;
-  /* position: absolute;  */
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -39,3 +36,43 @@ main {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
+ .header {
+  height: 400px;
+  width: 100%;
+  margin-top: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: pink;
+  background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
+}
+
+/* @media only screen and (min-width: 768px) {
+  .body{
+    display: flex;
+    flex-direction: column;
+  }
+} */
+
+/* Laptops / Desktops: minimum width of 1024px */
+@media (min-width: 1024px) {
+  nav {
+    width: 100%;
+  }
+  .header {
+    width: 45%;
+    margin: 5%;
+    display: flex;
+  }
+  #main-body{
+    display:flex
+  }
+  #main-container {
+    width: 45%;
+    margin: 5%;
+    display: flex;
+  }
+
+  
+}
