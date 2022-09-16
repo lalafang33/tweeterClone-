@@ -16,3 +16,11 @@ This repository is the starter code for the project: Students will fork and clon
 
 - Express
 - Node 5.10.x or above
+
+## Final Product 
+
+!["Screenshot of URLs page"](https://github.com/lalafang33/tweeterClone-/blob/main/docs/Desktop-MainPage.png)
+!["Screenshot of URLs page"](https://github.com/lalafang33/tweeterClone-/blob/main/docs/Empty-Tweet-error.png)
+!["Screenshot of URLs page"](https://github.com/lalafang33/tweeterClone-/blob/main/docs/Mobile-MainPage.png)
+!["Screenshot of URLs page"](https://github.com/lalafang33/tweeterClone-/blob/main/docs/err-toolong.png)
+!["Screenshot of URLs page"](https://github.com/lalafang33/tweeterClone-/blob/main/docs/tweet-display.png)
