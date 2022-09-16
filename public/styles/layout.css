@@ -6,13 +6,12 @@
 html {
   box-sizing: border-box;
 }
-*, *:before, *:after {
+
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
-
-/*
- * Global layout stuff
- */
 
 body {
   color: #545149;
@@ -22,7 +21,7 @@ body {
 }
 
 main {
-  padding: 1em; 
+  padding: 1em;
   width: 90%;
   background-color: #f4f1ec;
   display: flex;
@@ -32,11 +31,7 @@ main {
   align-content: center;
 }
 
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
-
- .header {
+.header {
   height: 400px;
   width: 100%;
   margin-top: 0px;
@@ -48,31 +43,26 @@ main {
   background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
 }
 
-/* @media only screen and (min-width: 768px) {
-  .body{
-    display: flex;
-    flex-direction: column;
-  }
-} */
-
-/* Laptops / Desktops: minimum width of 1024px */
 @media (min-width: 1024px) {
   nav {
     width: 100%;
   }
+
   .header {
     width: 45%;
     margin: 5%;
     display: flex;
   }
-  #main-body{
-    display:flex
+
+  #main-body {
+    display: flex
   }
+
   #main-container {
     width: 45%;
     margin: 5%;
     display: flex;
   }
 
-  
+
 }

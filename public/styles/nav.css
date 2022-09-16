@@ -14,17 +14,12 @@ nav {
   border: 1.5px;
   display: flex;
   justify-content: space-between;
-  /* position: fixed; */
-  /* font-family: 'Bungee'; */
-
   font-family: 'Bungee'
-  /* font-family: 'Source Sans Pro', sans-serif; */
-
 }
+
 nav > div {
   font-family: 'Source Sans Pro', sans-serif;
   text-align: center;
-  /* position: fixed; */
 }
 
 nav > div > p {

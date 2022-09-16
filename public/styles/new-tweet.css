@@ -8,7 +8,7 @@
 
 }
 
-.text-count{
+.text-count {
   display: flex;
   justify-content: space-between;
 }
@@ -30,31 +30,28 @@
 
 
 .error {
- color: red; 
- font-family:'Bungee' bold;
-
+  color: red;
+  font-family: 'Bungee';
 }
 
 .error-container {
   border: red solid;
   display: none;
 }
+
 .error-message {
   color: red;
-  font-family:'Bungee';
-  border: red; 
+  font-family: 'Bungee';
+  border: red;
   display: flex;
   justify-content: center;
- }
+}
 
 article.tweet:hover {
-    box-shadow: 0 0 15px;
-    border-color: lightgrey;
- }
-/* .error-container {
-  border: solid black;
+  box-shadow: 0 0 15px;
+  border-color: lightgrey;
+}
 
-} */
 .fa-solid:hover {
   color: lightgrey;
 }

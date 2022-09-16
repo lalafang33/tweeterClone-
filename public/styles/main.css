@@ -1,9 +1,6 @@
 .new-tweet {
   width: 100%;
   background: transparent;
-  /* border-top: hidden;
-  border-right-style: hidden;
-  border-left-style: hidden; */
   outline: none;
   color: black;
   resize: none;
@@ -18,24 +15,24 @@
   align-items: center;
   margin: 30px;
   flex-direction: column;
-  
+
 }
 
-.tweet > h5 {
+.tweet>h5 {
   border-bottom: solid black;
   padding: 1em;
   border-width: 100%;
- 
+
 }
 
 .tweetheader {
-  display:flex; 
+  display: flex;
   justify-content: space-between;
 
 }
 
 
-.iconparent{
+.iconparent {
   display: flex;
   flex-direction: row;
 }

@@ -73,10 +73,6 @@ $(document).ready(function () {
     return article;
   };
 
-
-
-
-  // writing tweet grabbing the form
   const $form = $('.tweetForm');
 
   $form.on('submit', (event) => {
