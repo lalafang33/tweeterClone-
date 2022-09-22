@@ -11,7 +11,7 @@ $(document).ready(function () {
     if (textlen <= 0) {
       errorMsg.html("error, tweet is too long!")
       counter.addClass('error');
-    } else if (text === null || text === "") {
+    }else if (text === null || text === "") {
       errorMsg.html("Tweet cannot be empty").addClass('error');
     } else {
       $.post("/tweets", $(this).serialize())

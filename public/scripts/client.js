@@ -81,15 +81,20 @@ $(document).ready(function () {
     let $errorMsg = $('.error-message');
     let $errorContainer = $('.error-container')
     if (text === null || text === "") {
-      setTimeout(()=> {
+      setTimeout(() => {
         $($errorContainer).slideDown();
-      $errorMsg.html("Please do not submit an empty tweet")
-    },500);
+        $errorMsg.html("Please do not submit an empty tweet")
+      }, 500);
+    } else if (text.length > 140) {
+      $($errorContainer).slideDown();
+      $errorMsg.html("Please shorten your tweet!")
     } else {
+      $($errorContainer).slideUp();
       const serializedData = $form.serialize();
       console.log(serializedData);
       $.post('/tweets', serializedData, (response) => {
         console.log("this is line88", response);
+        $('#tweet-text').val("");
         loadTweet();
       })
     }
