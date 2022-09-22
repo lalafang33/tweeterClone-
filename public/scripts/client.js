@@ -35,7 +35,6 @@ $(document).ready(function () {
   };
 
   const $container = $('.tweet-container');
-
   const loadTweet = () => {
     $.get("/tweets", function (data) {
       $container.empty();
@@ -43,7 +42,6 @@ $(document).ready(function () {
       console.log(data);
     });
   };
-
 
   const createTweetElement = function (tweet) {
     const user = tweet.user;
@@ -74,7 +72,6 @@ $(document).ready(function () {
   };
 
   const $form = $('.tweetForm');
-
   $form.on('submit', (event) => {
     event.preventDefault();
     let text = $('#tweet-text').val();

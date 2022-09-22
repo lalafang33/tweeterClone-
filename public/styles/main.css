@@ -15,20 +15,17 @@
   align-items: center;
   margin: 30px;
   flex-direction: column;
-
 }
 
 .tweet>h5 {
   border-bottom: solid black;
   padding: 1em;
   border-width: 100%;
-
 }
 
 .tweetheader {
   display: flex;
   justify-content: space-between;
-
 }
 
 
