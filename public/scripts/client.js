@@ -92,6 +92,7 @@ $(document).ready(function () {
       $.post('/tweets', serializedData, (response) => {
         console.log("this is line88", response);
         $('#tweet-text').val("");
+        $form.find("output").val(140);
         loadTweet();
       })
     }
