@@ -10,6 +10,10 @@ $(document).ready(function () {
     counter.val(textlen);
     if (textlen <= 0) {
       counter.addClass('error');
+    } else {
+      let $errorContainer = $('.error-container')
+        $($errorContainer).slideUp();
+        
     }
   });
 });

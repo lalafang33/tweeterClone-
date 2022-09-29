@@ -1,3 +1,8 @@
+const escape = function (str) {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
 
 $(document).ready(function () {
 
@@ -60,7 +65,7 @@ $(document).ready(function () {
           <p class="handle">${user.handle}</p>
         </header>
         <div class="tweet-words"> 
-          <p>${content.text}</p>
+        <p>${escape(content.text)}</p>
         </div>
         <div class="bottom-tag">
         <h6 class="time-stamp">${timeago.format(createdAt)} </h6>
