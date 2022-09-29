@@ -1,5 +1,7 @@
 const maxLength = 140;
 
+// error handling for character counter
+
 $(document).ready(function () {
   $('#tweet-text').keyup(function () { 
     const textlen = maxLength - $(this).val().length;

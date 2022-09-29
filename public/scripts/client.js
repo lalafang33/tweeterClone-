@@ -27,12 +27,16 @@ $(document).ready(function () {
     }
   ]
 
+  // tweet rendering
+
   const renderTweets = function (tweets) {
     for (const tweet of tweets) {
       const generatedTweet = createTweetElement(tweet);
       $("#tweet-container").prepend(generatedTweet);
     }
   };
+
+  // emptying the tweet container
 
   const $container = $('.tweet-container');
   const loadTweet = () => {
